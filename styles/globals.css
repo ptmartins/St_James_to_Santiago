@@ -1,6 +1,6 @@
 :root {
-  --bg-color: #0d2f45;
-  --font-color: #fff;
+  --dark-color: #0d2f45;
+  --font-color: #333;
 }
 
 * {
@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
+.u-link {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
 .main-wrapper {
   display: flex;
   flex-direction: column;
@@ -30,7 +35,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background: var(--bg-color);
   color: var(--font-color);
   line-height: 1.5;
   max-width: 100vw;
@@ -59,6 +63,10 @@ body {
   font-size: 1.5rem;
   margin-left: 1.5rem;
   text-decoration: none;
+}
+
+.nav__link.active {
+  color: var(--bg-color);
 }
 
 .main {
@@ -103,16 +111,19 @@ body {
   width: 100%;
 }
 
+.section--intro {
+  background: var(--dark-color);
+  color: #fff;
+}
+
 .posts {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 3rem;
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .post {
   box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-  width: calc(25% - 3rem);
 }
 
 .post__thumbnail {

@@ -14,8 +14,6 @@ const raleway = Raleway({
   subsets: ['latin']
 });
 
-console.log(raleway);
-
 export default function App({ Component, pageProps }) {
   return (
     <div className="main-wrapper">
